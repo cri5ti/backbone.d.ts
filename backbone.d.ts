@@ -59,6 +59,10 @@ declare module Backbone {
     }
 
     export class Router {
+        routes: any;
+        //initialize
+        route(route: string, name: string, callback: Function): void;
+        navigate(fragment: string, options? ): void;
     }
 
     declare var history: any;
