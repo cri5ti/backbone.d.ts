@@ -66,4 +66,23 @@ declare module Backbone {
     }
 
     declare var history: any;
+
+    export class View { 
+        //initialize
+        el: HTMLElement;
+        $el: any;
+        setElement(element: HTMLElement): void;
+        attributes: any;
+        $(selector: string): any;
+        render(): void;
+        remove(): void;
+        make(tagName: string, attributes?: any, content?: any): HTMLElement;
+        delegateEvents(events? ): void;
+        undelegateEvents(events? ): void;
+    }
+
+    declare function noConflict(): any;
+
+    declare function setDomLibrary(any): void;
+
 }
